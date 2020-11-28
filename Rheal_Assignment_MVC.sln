@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rheal_Assignment_MVC", "Rheal_Assignment_MVC\Rheal_Assignment_MVC.csproj", "{F041C79C-4C64-4619-89C4-84B344DCF755}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F041C79C-4C64-4619-89C4-84B344DCF755}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F041C79C-4C64-4619-89C4-84B344DCF755}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F041C79C-4C64-4619-89C4-84B344DCF755}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F041C79C-4C64-4619-89C4-84B344DCF755}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {99DABC91-A25E-4E88-9CB4-D2D4C4A0EA79}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Rheal_Assignment_MVC.Models.Course>
+<br />
+<br />
+<br />
+<h2>Your Courses</h2>
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseNoOfModules)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CoursePrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseTrainer.Name)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseNoOfModules)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CoursePrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseTrainer.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+
+</table>

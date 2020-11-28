@@ -20,6 +20,22 @@ namespace Rheal_Assignment_MVC.Controllers
             context = new RhealAssignmentDBContext();
         }
 
+        public ActionResult SearchResult(string query)
+        {
+            //get courses based on query
+            var result = courseRepo.getData();
+            result = result.Where(e => e.CourseName.Contains(query)).ToList();
+
+            //store logged in user data in viewbag
+            if (User != null && User.IsInRole("Student"))
+            {
+                string userId = User.Identity.GetUserId();
+                Student user = context.Students.Where(e => e.UserId == userId).FirstOrDefault();
+                ViewBag.loggedInUser = user.StudentRowId;
+            }
+
+            return View(result);
+        }
         public ActionResult Index()
         {
             //get all courses and show courses

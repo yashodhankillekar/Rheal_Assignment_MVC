@@ -26,11 +26,18 @@
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     @Html.Partial("MenuPartial")
                 </ul>
+                <form method="get" action="Home/SearchResult" class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input id="query" name="query" type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
     <div class="container body-content">
+        <br />
         @RenderBody()
         <hr />
         <footer>

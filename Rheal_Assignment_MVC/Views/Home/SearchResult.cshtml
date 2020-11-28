@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Rheal_Assignment_MVC.Models.Course>
+@{
+    ViewBag.Title = "Home Page";
+}
+<div class="text-center">
+    <h2>Courses We Offer</h2>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3>@item.CourseName</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>Course Id: @item.CourseId</p>
+                        <p>Course Trainer: <b>@item.CourseTrainer.Name</b> </p>
+                        <p>Course Price: <b>@item.CoursePrice</b> </p>
+                        <br />
+                        @Html.ActionLink(linkText: "Enroll",
+                       actionName: "EnrollIntoCourse",
+                       controllerName: "StudentCourse",
+                       routeValues: new { course_id = item.CourseRowId, student_id = ViewBag.loggedInUser },
+                       htmlAttributes: new { @class = "btn btn-primary btn-block" })
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
+
+<div>
+
+</div>

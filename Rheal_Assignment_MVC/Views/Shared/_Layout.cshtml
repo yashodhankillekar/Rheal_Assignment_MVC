@@ -17,20 +17,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Online Training", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     @Html.Partial("MenuPartial")
                 </ul>
-                <form method="get" action="Home/SearchResult" class="navbar-form navbar-left">
+                <form method="get" action="~/Home/SearchResult" class="navbar-form navbar-left">
                     <div class="form-group">
-                        <input id="query" name="query" type="text" class="form-control" placeholder="Search">
+                        <input id="query" name="query" type="text" class="form-control" placeholder="Search Courses">
                     </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button type="submit" class="btn btn-default">Search</button>
                 </form>
                 @Html.Partial("_LoginPartial")
             </div>
